@@ -2,13 +2,13 @@ const Recipe = require('../model/recipe');
 
 
 exports.createRecipe = (req, res, next) => {
-    const recipe = new Recipe({
+    const recipe = new Recipe ({
         title: req.body.title,
         ingredients: req.body.ingredients,
         instructions: req.body.instructions,
         difficulty: req.body.difficulty,
         time: req.body.time,
-        _id: req.body._id,
+        _id: req.body._id
     });
     recipe.save().then(
         () => {
